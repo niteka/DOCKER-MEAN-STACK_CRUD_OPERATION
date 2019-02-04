@@ -15,11 +15,11 @@ RUN npm cache verify
 RUN npm install 
 # copy all the codes, folders present from the project directory to inside the container.
 COPY . /usr/src/app
-# asks the container to expose port number 4200 for communicating with back end server to send requests made by users accessing the front end client via the Web UI.
-EXPOSE 4200
+# asks the container to expose port number 5555 for communicating with back end server to send requests made by users accessing the front end client via the Web UI.
+EXPOSE 5555
 # starts executing the codes for building our Angular app.
-CMD /usr/src/app/node_modules/\@angular/cli/bin/ng server --host 0.0.0.0 --port 4200
-#CMD ["npm", "start"]
+CMD /usr/src/app/node_modules/\@angular/cli/bin/ng server --host 0.0.0.0 --port 5555
+
 
 
 
