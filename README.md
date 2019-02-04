@@ -16,7 +16,17 @@ This will start
 
 Open http://localhost:4200 for front end
 
+### Backup archive files [(for download)](https://we.tl/t-VAxv1l2CHE)
+ #### Angular
+ - angular-save.tar   | Image size:  489,9 Mo   
+ - angular-export.tar  | Container size : 489,1 Mo
+ 
+ #### Node Express
+ - node-express-save.tar  | Image size: 94,1 Mo 
+ - node-express-export.tar | Container size: 93,7 Mo
 
+#### Mongo
+ - mongo-save.tar         | image size: 400 Mo
 
 ### Docker Compose
 
@@ -39,5 +49,11 @@ docker rm $(docker ps -aq)
 
 # Remove all images
 docker rmi $(docker images -q)
+
+# save the image  
+docker save image_id > name.tar
+# export the container.
+docker export container_id > name.tar
+
 
 ```
