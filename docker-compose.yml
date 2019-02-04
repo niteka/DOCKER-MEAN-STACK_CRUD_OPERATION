@@ -15,7 +15,7 @@ services: # Define the services/ containers to be run
       - mongodb
     network_mode: "service:mongodb"  
     environment:
-      DATABASE_URL: 'NodeJS/db.js' 
+      DATABASE_URL: 'NodeJS/db.js' # specify the environment database
     
   
   ######  client-angular service ################

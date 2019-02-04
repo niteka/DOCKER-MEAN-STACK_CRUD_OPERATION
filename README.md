@@ -1,40 +1,43 @@
-# MEAN Stack CRUD Operations for Beginners
-This is a MEAN Stack Demo Project Showing CRUD Operations Insert Update Delete and Read.
+# DOCKER-MEAN-STACK_CRUD_OPERATIONS
 
-###### Before Running this Project
-Install npm packages using 'npm install' command from both Angular and NodeJS Project Folder. 
+## Getting Started
 
- # Step By Step Explanation
- 
- Video Tutorial : https://youtu.be/UYh6EvpQquw
- 
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=UYh6EvpQquw
-" target="_blank"><img src="http://img.youtube.com/vi/UYh6EvpQquw/0.jpg" 
-alt="Video Tutorial for MEAN Stack CRUD Operations" width="500" height="400" border="10" /></a>
+The quickest way to get going is to run:
 
-# MEAN Stack Tutorial Hierarchy
-1. CRUD Operation - Insert Update View and Delete ➤ this one
-2. User Registration 
-    Node JS Back End ➤ https://goo.gl/CMnPwe <br/>
-    Angualr 6 Front End ➤ https://goo.gl/xivk4x <br/>
-3. JWT Authentication <br/>
-    Node JS Back End  ➤ https://goo.gl/9tWHXo
+```sh
+docker-compose up --build
+```
 
-# All Video Tutorial Series
-| Series        | Video PlayList          |
-| ------------- |:-------------:|
-| Angular 7|https://goo.gl/vN9LFd  |
-| Asp.Net MVC|https://goo.gl/gvjUJ7  |
-| Asp.Net Core|https://goo.gl/scJc4f  |
-| Node JS|https://goo.gl/viJcFs  |
-| Web API|https://goo.gl/itVayJ  |
-| Angular Material|https://goo.gl/TbDQnT  |
-| MEAN Stack|https://goo.gl/YJPPAH  |
-| C# Tutorial|https://goo.gl/s1zJxo  |
-| Asp.Net WebForm|https://goo.gl/GXC2aJ  |
-| Angular 5|https://goo.gl/ahk39S  |
-| Angular 4|https://goo.gl/Ha71kq  |
-| C# WinForm|https://goo.gl/vHS9Hd  |
-| MS SQL|https://goo.gl/MLYS9e  |
-| Crystal Report|https://goo.gl/5Vou7t  |
-| CG Exercises in C Program|https://goo.gl/qEWJCs  |
+This will start
+
+- Node server on port [3000](http://localhost:3000)
+- MongoDb on port [27017](http://localhost:27017)
+- Angular on port [5555](http://localhost:4200) 
+
+Open http://localhost:4200 for front end
+
+
+
+### Docker Compose
+
+```sh
+### Prod ###
+# Start all services
+docker-compose -f docker-compose.yml up --build
+
+```
+## Help
+
+### Docker Commands
+
+```sh
+# Stop all running containers
+docker stop $(docker ps -aq)
+
+# Remove all containers
+docker rm $(docker ps -aq)
+
+# Remove all images
+docker rmi $(docker images -q)
+
+```

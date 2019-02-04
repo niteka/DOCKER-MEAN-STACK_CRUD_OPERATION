@@ -20,4 +20,3 @@ COPY . /usr/src/app
 EXPOSE 3000
 # starts executing the codes for building our Angular app.
 CMD ["node","index.js"]
-#CMD ["npm", "start"]
