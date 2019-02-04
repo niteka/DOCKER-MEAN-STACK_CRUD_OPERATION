@@ -1,0 +1,16 @@
+FROM node:latest as node
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD /app/node_modules/\@angular/cli/bin/ng server --host 0.0.0.0 --port 4200
+EXPOSE 4200
+# RUN npm install
+# ARG env=prod
+# RUN npm run build -- --prod --environment $env
+
+
+# FROM nginx:alpine
+# VOLUME /var/cahe/nginx
+# COPY --from=node /app/dist /usr/share/nginx/html
+# COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
